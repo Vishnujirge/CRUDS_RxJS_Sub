@@ -1,0 +1,14 @@
+.navbar-brand img {
+  height: 40px;      
+  width: auto;       /* aspect ratio safe */
+  object-fit: contain;
+}
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 32px;
+  }
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}

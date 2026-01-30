@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-4">
+        <div class="card-body">
+          <form #userNameForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="username">UserName</label>
+              <input
+                required
+                #username="ngModel"
+                ngModel
+                name="username"
+                class="form-control"
+                type="text"
+              />
+
+              <small
+                class="text-danger"
+                *ngIf="username.touched && username.invalid"
+              >
+                Username is required (min 3 chars)
+              </small>
+
+              <button
+                class="btn btn-primary mt-4"
+                [disabled]="userNameForm.invalid"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mt-3">
+      <app-one> </app-one>
+    </div>
+    <div class="col-md-4 mt-3">
+      <app-two> </app-two>
+    </div>
+    <div class="col-md-4 mt-3">
+      <app-three> </app-three>
+    </div>
+  </div>
+</div>
