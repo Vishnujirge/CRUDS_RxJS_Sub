@@ -98,18 +98,19 @@
               <td class="contact-email">
                 <div class="ce-row">
                   <span>{{ std.contact }}</span>
-                  <a mat-mini-fab color="warn" [href]="'tel:' + std.contact">
+                  <a
+                    mat-mini-fab
+                    class="bg-success"
+                    color="warn"
+                    [href]="'tel:' + std.contact"
+                  >
                     <mat-icon>phone_in_talk</mat-icon>
                   </a>
                 </div>
 
                 <div class="ce-row">
                   <span class="email-text">{{ std.email }}</span>
-                  <a
-                    mat-mini-fab
-                    color="primary"
-                    [href]="'mailto:' + std.email"
-                  >
+                  <a mat-mini-fab color="warn" [href]="'mailto:' + std.email">
                     <mat-icon>forward_to_inbox</mat-icon>
                   </a>
                 </div>
