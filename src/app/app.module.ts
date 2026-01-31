@@ -18,6 +18,10 @@ import { TwoComponent } from './shared/components/two/two.component';
 import { SubFormComponent } from './shared/components/sub-form/sub-form.component';
 import { ThreeComponent } from './shared/components/three/three.component';
 import { FormsModule } from '@angular/forms';
+import { DeleteConfirmDialogComponent } from './shared/components/delete-confirm-dialog/delete-confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     OneComponent,
     TwoComponent,
     SubFormComponent,
-    ThreeComponent
+    ThreeComponent,
+    DeleteConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,14 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+      
   ],
   providers: [],
   bootstrap: [AppComponent]

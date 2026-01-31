@@ -1,3 +1,64 @@
+
+<div class="col-md-12">
+  <div class="card glass-table">
+    <div class="card-body">
+      <div class="table-responsive glass-table">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Full Name </th>
+              <th>Contact & Email</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let std of filteredArr; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ std.fname }} {{ std.lname }}</td>
+              <td class="contact-email">
+                <div class="ce-row">
+                  <span>{{ std.contact }}</span>
+                  <a
+                    mat-mini-fab
+                    class="bg-success"
+                    color="warn"
+                    [href]="'tel:' + std.contact"
+                  >
+                    <mat-icon>phone_in_talk</mat-icon>
+                  </a>
+                </div>
+
+                <div class="ce-row">
+                  <span class="email-text">{{ std.email }}</span>
+                  <a mat-mini-fab color="warn" [href]="'mailto:' + std.email">
+                    <mat-icon>forward_to_inbox</mat-icon>
+                  </a>
+                </div>
+              </td>
+
+              <td class="text-center">
+                <button mat-mini-fab color="primary">
+                  <mat-icon>brush</mat-icon>
+                </button>
+              </td>
+              <td class="text-center">
+                <button mat-mini-fab color="warn"  (click)="openDeleteDialog(std)">
+                  <mat-icon>delete_sweep</mat-icon>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================== -->
+
 <!-- <div class="col-md-12">
   <div class="card glass-table">
     <div class="card-body">
@@ -76,60 +137,3 @@
   </div>
 </div> -->
 
-<!-- ================== -->
-<div class="col-md-12">
-  <div class="card glass-table">
-    <div class="card-body">
-      <div class="table-responsive glass-table">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Sr No</th>
-              <th>Full Name</th>
-              <th>Contact & Email</th>
-              <th>Edit</th>
-              <th>Remove</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let std of stdArr; let i = index">
-              <td>{{ i + 1 }}</td>
-              <td>{{ std.fname }} {{ std.lname }}</td>
-              <td class="contact-email">
-                <div class="ce-row">
-                  <span>{{ std.contact }}</span>
-                  <a
-                    mat-mini-fab
-                    class="bg-success"
-                    color="warn"
-                    [href]="'tel:' + std.contact"
-                  >
-                    <mat-icon>phone_in_talk</mat-icon>
-                  </a>
-                </div>
-
-                <div class="ce-row">
-                  <span class="email-text">{{ std.email }}</span>
-                  <a mat-mini-fab color="warn" [href]="'mailto:' + std.email">
-                    <mat-icon>forward_to_inbox</mat-icon>
-                  </a>
-                </div>
-              </td>
-
-              <td class="text-center">
-                <button mat-mini-fab color="primary">
-                  <mat-icon>brush</mat-icon>
-                </button>
-              </td>
-              <td class="text-center">
-                <button mat-mini-fab color="warn">
-                  <mat-icon>delete_sweep</mat-icon>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>

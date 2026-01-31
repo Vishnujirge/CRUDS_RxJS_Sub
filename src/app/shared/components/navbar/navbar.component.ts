@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../services/search-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
 
   ngOnInit(): void {
   }
@@ -18,4 +18,10 @@ export class NavbarComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+    constructor(private searchService: SearchService) {}
+
+  onSearch(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.searchService.setSearch(value);
+  }
 }
