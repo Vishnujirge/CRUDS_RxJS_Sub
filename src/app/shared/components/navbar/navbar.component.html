@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" routerLink="/home">
-    <img src="./assets/logoV1.png" alt="Logo" />
+    <img src="assets/TUC01.png" alt="logo" />
   </a>
 
   <button
@@ -12,32 +12,40 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div
-    class="collapse navbar-collapse"
-    [class.show]="isMenuOpen"
-    
-  >
+  <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/todo" routerLinkActive="active" (click)="isMenuOpen=false">Todo</a>
+        <a
+          class="nav-link"
+          routerLink="/todo"
+          routerLinkActive="active"
+          (click)="isMenuOpen = false"
+          >Todo</a
+        >
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/student" routerLinkActive="active" (click)="isMenuOpen=false">Studnet</a>
+        <a
+          class="nav-link"
+          routerLink="/student"
+          routerLinkActive="active"
+          (click)="isMenuOpen = false"
+          >Studnet B-19</a
+        >
       </li>
-        <li class="nav-item">
-        <a class="nav-link" routerLink="/subForm" routerLinkActive="active" (click)="isMenuOpen=false">SubForm</a>
-      </li>
-
-    
+      <!-- <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/subForm"
+          routerLinkActive="active"
+          (click)="isMenuOpen = false"
+          >SubForm</a
+        >
+      </li> -->
     </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      <input
-        class="form-control mr-sm-2"
-        type="search"
-        placeholder="Search"
-      />
+    <form class="form-inline my-2 my-lg-0 text-success">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" />
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
         Search
       </button>

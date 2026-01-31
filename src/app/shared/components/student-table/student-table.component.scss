@@ -1,0 +1,41 @@
+.contact-email {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ce-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email-text {
+  max-width: 260px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.contact-email {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ce-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.email-text {
+  max-width: 320px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.contact-email a {
+  text-decoration: none;
+}

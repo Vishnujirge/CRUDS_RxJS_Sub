@@ -1,4 +1,416 @@
-/* You can add global styles to this file, and also import other style files */
+// /* Global styles */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// html,
+// body {
+//   height: 100%;
+// }
+
+// body {
+//   margin: 0;
+//   min-height: 100vh;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+
+//   background-image: url('/assets/rrrrrrrrrr.jpg');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+// table {
+//   background: #fff;
+//   border-radius: 8px;
+//   overflow: hidden;
+// }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15); /* transparency */
+  backdrop-filter: blur(10px); /* glass blur */
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// th, td {
+//   background: rgba(255, 255, 255, 0.25);
+//   color: #fff;
+// }
+
+// thead th {
+//   background: rgba(0, 0, 0, 0.4);
+// }
+
+// input, select {
+//   background: rgba(255, 255, 255, 0.2) !important;
+//   color: #fff;
+//   border: 1px solid rgba(255, 255, 255, 0.4);
+// }
+
+// input::placeholder {
+//   color: rgba(255, 255, 255, 0.7);
+// }
+
+// button {
+//   backdrop-filter: none;
+// }
+
+// .glass-form {
+//   background: rgba(255, 255, 255, 0.12);
+//   backdrop-filter: blur(12px);
+//   -webkit-backdrop-filter: blur(12px);
+
+//   border-radius: 16px;
+//   padding: 24px;
+//   margin-bottom: 24px;
+
+//   border: 1px solid rgba(255, 255, 255, 0.25);
+//   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+// }
+
+// .glass-table {
+//   background: rgba(255, 255, 255, 0.18);
+//   backdrop-filter: blur(14px);
+//   -webkit-backdrop-filter: blur(14px);
+
+//   border-radius: 16px;
+//   padding: 16px;
+
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+// }
+
+// th, td {
+//   background: rgba(255, 255, 255, 0.25);
+//   color: #fff;
+//   border-color: rgba(255, 255, 255, 0.2);
+// }
+// thead th {
+//   background: rgba(0, 0, 0, 0.45);
+//   font-weight: 600;
+// }
+// tbody tr:hover td {
+//   background: rgba(255, 255, 255, 0.35);
+//   transition: 0.3s ease;
+// }
+
+// input {
+//   background: rgba(255, 255, 255, 0.25) !important;
+//   color: #fff;
+//   border: 1px solid rgba(255, 255, 255, 0.4);
+// }
+
+// input::placeholder {
+//   color: rgba(255, 255, 255, 0.7);
+// }
+// .table {
+//   margin-bottom: 0;
+//   border-radius: 12px;
+//   overflow: hidden;
+// }
+
+/* Global styles */
+html,
+body {
+  height: 100%;
+}
+
+// body {
+//   margin: 0;
+//   min-height: 100vh;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+
+//   background-image: url('/assets/rrrrrrrrrr.jpg');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url("/assets/rrrrrrrrrr.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* 🔥 KEY LINE */
+}
+
+/* ================= GLASS CONTAINERS ================= */
+
+.glass-form,
+.glass-table {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  padding: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= TABLE ================= */
+
+table {
+  background: transparent !important;
+  margin-bottom: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  background: rgba(255, 255, 255, 0.45);
+  color: #111; /* 🔥 BLACK TEXT */
+  font-weight: 500;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Table header */
+thead th {
+  background: rgba(255, 255, 255, 0.75);
+  color: #000;
+  font-weight: 600;
+}
+
+/* Hover effect */
+tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.65);
+  transition: 0.3s ease;
+}
+
+/* ================= FORM ================= */
+
+label {
+  color: #000;
+  font-weight: 500;
+}
+
+input,
+select {
+  background: rgba(255, 255, 255, 0.6) !important;
+  color: #000; /* 🔥 BLACK INPUT TEXT */
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* ================= BUTTON ================= */
+
+button {
+  backdrop-filter: none;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 768px) {
+
+  /* overall padding kam */
+  .glass-form,
+  .glass-table {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* font size reduce */
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* CONTACT column hide */
+  table th:nth-child(3),
+  table td:nth-child(3) {
+    display: none;
+  }
+
+  /* EMAIL column hide */
+  table th:nth-child(4),
+  table td:nth-child(4) {
+    display: none;
+  }
+
+  /* buttons smaller */
+  button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  table thead {
+    display: none;
+  }
+
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    padding: 10px;
+  }
+
+  table td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: 600;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  table thead {
+    display: none;
+  }
+
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    padding: 10px;
+  }
+
+  table td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: 600;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+
+  table thead {
+    display: none;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    background: rgba(255, 255, 255, 0.55);
+    margin-bottom: 16px;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4px;
+    border: none;
+    font-size: 13px;
+  }
+
+  /* Label */
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #000;
+  }
+
+  /* Sr No style */
+  td:first-child {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  /* Buttons row */
+  td:last-child,
+  td:nth-last-child(2) {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  app-student-dashboard {
+    display: flex;
+    justify-content: center;
+  }
+
+  app-student-table {
+    width: 100%;
+    max-width: 380px; /* 🔥 mobile device width control */
+  }
+}
+
+@media (max-width: 576px) {
+  .glass-table,
+  .glass-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  td[data-label="Edit"],
+  td[data-label="Remove"] {
+    justify-content: flex-end;
+  }
+}
+

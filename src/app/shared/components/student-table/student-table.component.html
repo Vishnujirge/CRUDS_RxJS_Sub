@@ -1,1 +1,134 @@
-<p>student-table works!</p>
+<!-- <div class="col-md-12">
+  <div class="card glass-table">
+    <div class="card-body">
+      <div>
+        <div class="table-responsive glass-table">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Sr No</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Contact & Email</th>
+                <th scope="col">Email</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--   <tr *ngFor="let std of stdArr; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ std.fname }} {{ std.lname }}</td>
+              <td>{{ std.contact }}</td>
+              <td>{{ std.email }}</td>
+              <td class="text-center">
+                <button
+                  mat-mini-fab
+                  color="primary"
+                  class="btn btn-sm btn-info mr-2"
+                >
+                  <mat-icon>brush </mat-icon>
+                </button>
+              </td>
+              <td class="text-center">
+                <button mat-mini-fab color="warn">
+                  <mat-icon class="mat-18">delete_sweep</mat-icon>
+                </button>
+              </td>
+            </tr> -->
+<!-- <tr *ngFor="let std of stdArr; let i = index">
+                <td data-label="Sr No">{{ i + 1 }}</td>
+                <td data-label="Name">{{ std.fname }} {{ std.lname }}</td>
+                <td data-label="Contact" class="d-flex justify-content-between">
+                  {{ std.contact }}
+
+                  <button mat-mini-fab color="" class="btn-success">
+                    <mat-icon class="mat-18">phone_in_talk </mat-icon>
+                  </button>
+                </td>
+                <td data-label="Email" class="d-flex justify-content-between align-items-center">
+                  {{ std.email }}
+                  <button mat-mini-fab color="warn" class="btn-success">
+                    <mat-icon class="mat-18">forward_to_inbox</mat-icon>
+                  </button>
+                </td>
+                <td data-label="Edit" class="text-center">
+                   <button class="btn btn-warning">✏️</button> -->
+<!--   <button
+                    mat-mini-fab
+                    color="primary"
+                    class="btn btn-sm btn-info mr-2"
+                  >
+                    <mat-icon>brush </mat-icon>
+                  </button>
+                </td>
+                <td data-label="Remove" class="text-center">
+                  <button class="btn btn-danger">🗑</button> -->
+<!--  <button mat-mini-fab color="warn">
+                    <mat-icon class="mat-18">delete_sweep</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- ================== -->
+<div class="col-md-12">
+  <div class="card glass-table">
+    <div class="card-body">
+      <div class="table-responsive glass-table">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Full Name</th>
+              <th>Contact & Email</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let std of stdArr; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ std.fname }} {{ std.lname }}</td>
+              <td class="contact-email">
+                <div class="ce-row">
+                  <span>{{ std.contact }}</span>
+                  <a mat-mini-fab color="warn" [href]="'tel:' + std.contact">
+                    <mat-icon>phone_in_talk</mat-icon>
+                  </a>
+                </div>
+
+                <div class="ce-row">
+                  <span class="email-text">{{ std.email }}</span>
+                  <a
+                    mat-mini-fab
+                    color="primary"
+                    [href]="'mailto:' + std.email"
+                  >
+                    <mat-icon>forward_to_inbox</mat-icon>
+                  </a>
+                </div>
+              </td>
+
+              <td class="text-center">
+                <button mat-mini-fab color="primary">
+                  <mat-icon>brush</mat-icon>
+                </button>
+              </td>
+              <td class="text-center">
+                <button mat-mini-fab color="warn">
+                  <mat-icon>delete_sweep</mat-icon>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

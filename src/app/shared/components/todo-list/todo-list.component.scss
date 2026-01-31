@@ -1,0 +1,87 @@
+/* FAB button reset */
+.fab-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 0;                 /* 🔑 material offset remove */
+}
+
+/* Full-size center layer */
+.fab-btn .icon-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, calc(-50% + 14px)); /* 🔽 start lower */
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+/* Hover → exact center */
+.fab-btn:hover .icon-layer {
+  transform: translate(-50%, -50%);
+}
+
+/* Normalize mat-icon */
+.fab-btn mat-icon {
+  font-size: 20px;   /* mini-fab friendly */
+  line-height: 1;
+  margin: 0;
+}
+
+
+// =============================
+/* Base FAB glow setup */
+.glow-fab {
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+/* Zoom-in on hover */
+.glow-fab:hover {
+  transform: scale(1.15);
+}
+
+/* Glow ring */
+.glow-fab::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+
+  background: rgba(244, 67, 54, 0.6); /* red glow */
+  filter: blur(10px);
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+/* Show glow on hover */
+.glow-fab:hover::after {
+  opacity: 1;
+}
+
+.glow-fab:hover::after {
+  opacity: 1;
+  animation: redPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes redPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+}
