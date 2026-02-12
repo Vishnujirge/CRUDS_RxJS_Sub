@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsernameService {
+  // userNameSub$ : Subject<string> = new Subject<string>;
+  private userNameSub$: Subject<string> = new Subject<string>();
+  public userNameSubObs$ : Observable<string> = this.userNameSub$.asObservable()
+  constructor() {}
 
-  userNameSub$ : Subject<string> = new Subject<string>;
-  
-
-  constructor() { }
+  setUserName(value: string) {
+    // as observer .next(data)
+    this.userNameSub$.next(value);
+  }
 }

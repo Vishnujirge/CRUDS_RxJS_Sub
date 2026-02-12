@@ -13,10 +13,13 @@ export class OneComponent implements OnInit {
   constructor(private _userService : UsernameService) { }
 
   ngOnInit(): void {
-    this._userService.userNameSub$
-    .subscribe(data=>{
-      this.userName=data
-    })
+    // this._userService.userNameSub$
+    // .subscribe(data=>{
+    //   this.userName=data
+    // })
+
+
+    this._userService.userNameSubObs$.subscribe(data =>this.userName=data)
   }
 
 }

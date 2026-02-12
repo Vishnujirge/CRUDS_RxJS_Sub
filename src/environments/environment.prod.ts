@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  firebaseDbUrl: 'https://tucb19crudproject-default-rtdb.firebaseio.com'
 };

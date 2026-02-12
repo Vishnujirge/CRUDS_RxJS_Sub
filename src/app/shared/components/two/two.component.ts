@@ -14,10 +14,12 @@ export class TwoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._userService.userNameSub$
-    .subscribe(data=>{
-      this.userName=data;
-    })
+    // this._userService.userNameSub$
+    // .subscribe(data=>{
+    //   this.userName=data;
+    // })
+
+    this._userService.userNameSubObs$.subscribe(data => this.userName=data)
   }
   
 
